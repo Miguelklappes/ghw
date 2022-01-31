@@ -8,13 +8,12 @@ package memory
 
 import (
 	"fmt"
-	"math"
-
 	"github.com/jaypipes/ghw/pkg/context"
 	"github.com/jaypipes/ghw/pkg/marshal"
 	"github.com/jaypipes/ghw/pkg/option"
 	"github.com/jaypipes/ghw/pkg/unitutil"
 	"github.com/jaypipes/ghw/pkg/util"
+	"math"
 )
 
 type Module struct {
@@ -23,6 +22,10 @@ type Module struct {
 	SerialNumber string `json:"serial_number"`
 	SizeBytes    int64  `json:"size_bytes"`
 	Vendor       string `json:"vendor"`
+	Speed        int32  `json:"speed"`
+	TotalWidth   int16  `json:"total_width"`
+	DataWidth    int16  `json:"data_width"`
+	PartNumber   string `json:"part_number"`
 }
 
 type Area struct {

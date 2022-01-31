@@ -55,9 +55,13 @@ func (i *Info) load() error {
 		i.Modules = append(i.Modules, &Module{
 			Label:        *description.BankLabel,
 			Location:     *description.DeviceLocator,
-			SerialNumber: *description.SerialNumber,
-			SizeBytes:    int64(*description.Capacity),
 			Vendor:       *description.Manufacturer,
+			SerialNumber: *description.SerialNumber,
+			PartNumber:   *description.PartNumber,
+			Speed:        int32(*description.Speed),
+			SizeBytes:    int64(*description.Capacity),
+			DataWidth:    int16(*description.DataWidth),
+			TotalWidth:   int16(*description.TotalWidth),
 		})
 	}
 	var totalUsableBytes uint64
