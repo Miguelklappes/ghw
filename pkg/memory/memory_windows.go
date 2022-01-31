@@ -53,15 +53,16 @@ func (i *Info) load() error {
 	for _, description := range win32MemDescriptions {
 		totalPhysicalBytes += *description.Capacity
 		i.Modules = append(i.Modules, &Module{
-			Label:        *description.BankLabel,
-			Location:     *description.DeviceLocator,
-			Vendor:       *description.Manufacturer,
-			SerialNumber: *description.SerialNumber,
-			PartNumber:   *description.PartNumber,
-			Speed:        int32(*description.Speed),
-			SizeBytes:    int64(*description.Capacity),
-			DataWidth:    int16(*description.DataWidth),
-			TotalWidth:   int16(*description.TotalWidth),
+			Label:         *description.BankLabel,
+			Location:      *description.DeviceLocator,
+			Vendor:        *description.Manufacturer,
+			SerialNumber:  *description.SerialNumber,
+			PartNumber:    *description.PartNumber,
+			Speed:         int32(*description.Speed),
+			SizeBytes:     int64(*description.Capacity),
+			PositionInRow: int32(*description.PositionInRow),
+			DataWidth:     int16(*description.DataWidth),
+			TotalWidth:    int16(*description.TotalWidth),
 		})
 	}
 	var totalUsableBytes uint64

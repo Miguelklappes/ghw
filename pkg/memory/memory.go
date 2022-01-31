@@ -17,15 +17,16 @@ import (
 )
 
 type Module struct {
-	Label        string `json:"label"`
-	Location     string `json:"location"`
-	SerialNumber string `json:"serial_number"`
-	SizeBytes    int64  `json:"size_bytes"`
-	Vendor       string `json:"vendor"`
-	Speed        int32  `json:"speed"`
-	TotalWidth   int16  `json:"total_width"`
-	DataWidth    int16  `json:"data_width"`
-	PartNumber   string `json:"part_number"`
+	Label         string `json:"label"`
+	Location      string `json:"location"`
+	SerialNumber  string `json:"serial_number"`
+	SizeBytes     int64  `json:"size_bytes"`
+	Vendor        string `json:"vendor"`
+	Speed         int32  `json:"speed"`
+	TotalWidth    int16  `json:"total_width"`
+	DataWidth     int16  `json:"data_width"`
+	PartNumber    string `json:"part_number"`
+	PositionInRow int32  `json:"position_in_row"`
 }
 
 type Area struct {
