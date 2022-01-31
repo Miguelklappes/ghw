@@ -20,6 +20,7 @@ type Module struct {
 	Label         string `json:"label"`
 	Location      string `json:"location"`
 	SerialNumber  string `json:"serial_number"`
+	DeviceLocator string `json:"device_locator"`
 	SizeBytes     int64  `json:"size_bytes"`
 	Vendor        string `json:"vendor"`
 	Speed         int32  `json:"speed"`

@@ -57,6 +57,7 @@ func (i *Info) load() error {
 			Location:      *description.DeviceLocator,
 			Vendor:        *description.Manufacturer,
 			SerialNumber:  *description.SerialNumber,
+			DeviceLocator: *description.DeviceLocator,
 			PartNumber:    *description.PartNumber,
 			Speed:         int32(*description.Speed),
 			SizeBytes:     int64(*description.Capacity),
