@@ -31,8 +31,8 @@ type GraphicsCard struct {
 	Node                    *topology.Node `json:"node,omitempty"`
 	VideoModeDescription    string         `json:"video_mode_description"`
 	Caption                 string         `json:"caption"`
-	Description             string         `json:"description"`
 	CreationClassName       string         `json:"creation_class_name"`
+	Description             string         `json:"description"`
 	DeviceID                string         `json:"device_id"`
 	Name                    string         `json:"name"`
 	SystemCreationClassName string         `json:"system_creation_class_name"`
