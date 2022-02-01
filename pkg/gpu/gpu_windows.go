@@ -71,9 +71,22 @@ func (i *Info) load() error {
 	cards := make([]*GraphicsCard, 0)
 	for _, description := range win32VideoControllerDescriptions {
 		card := &GraphicsCard{
-			Address:    description.DeviceID, // https://stackoverflow.com/questions/32073667/how-do-i-discover-the-pcie-bus-topology-and-slot-numbers-on-the-board
-			Index:      0,
-			DeviceInfo: GetDevice(description.PNPDeviceID, win32PnPDescriptions),
+			Address:                 description.DeviceID, // https://stackoverflow.com/questions/32073667/how-do-i-discover-the-pcie-bus-topology-and-slot-numbers-on-the-board
+			Index:                   0,
+			DeviceInfo:              GetDevice(description.PNPDeviceID, win32PnPDescriptions),
+			Node:                    nil,
+			VideoModeDescription:    description.VideoModeDescription,
+			Caption:                 description.Caption,
+			CreationClassName:       description.CreationClassName,
+			Description:             description.Description,
+			DeviceID:                description.DeviceID,
+			Name:                    description.Name,
+			PNPDeviceID:             description.PNPDeviceID,
+			SystemCreationClassName: description.SystemCreationClassName,
+			SystemName:              description.SystemName,
+			VideoArchitecture:       description.VideoArchitecture,
+			VideoMemoryType:         description.VideoMemoryType,
+			VideoProcessor:          description.VideoProcessor,
 		}
 		cards = append(cards, card)
 	}
