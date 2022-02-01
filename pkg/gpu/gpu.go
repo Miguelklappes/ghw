@@ -28,7 +28,19 @@ type GraphicsCard struct {
 	DeviceInfo *pci.Device `json:"pci"`
 	// Topology node that the graphics card is affined to. Will be nil if the
 	// architecture is not NUMA.
-	Node *topology.Node `json:"node,omitempty"`
+	Node                    *topology.Node `json:"node,omitempty"`
+	Caption                 string         `json:"caption"`
+	CreationClassName       string         `json:"creation_class_name"`
+	Description             string         `json:"description"`
+	DeviceID                string         `json:"device_id"`
+	Name                    string         `json:"name"`
+	PNPDeviceID             string         `json:"pnp_device_id"`
+	SystemCreationClassName string         `json:"system_creation_class_name"`
+	SystemName              string         `json:"system_name"`
+	VideoArchitecture       uint16         `json:"video_architecture"`
+	VideoMemoryType         uint16         `json:"video_memory_type"`
+	VideoModeDescription    string         `json:"video_mode_description"`
+	VideoProcessor          string         `json:"video_processor"`
 }
 
 func (card *GraphicsCard) String() string {
