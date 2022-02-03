@@ -55,7 +55,7 @@ func (i *Info) load() error {
 	// Building dynamic WHERE clause with addresses to create a single query collecting all desired data
 	queryAddresses := []string{}
 	for _, description := range win32VideoControllerDescriptions {
-		var queryAddres = strings.Replace(description.PNPDeviceID, "\\", `\\`, -1)
+		var queryAddres = description.PNPDeviceID
 		queryAddresses = append(queryAddresses, "PNPDeviceID='"+queryAddres+"'")
 	}
 	whereClause := strings.Join(queryAddresses[:], " OR ")
