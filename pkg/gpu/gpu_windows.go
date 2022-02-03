@@ -136,8 +136,8 @@ func GetDevice(id string, entities []win32PnPEntity) *pci.Device {
 		if id == description.PNPDeviceID {
 			device.Vendor.ID = description.Manufacturer
 			device.Vendor.Name = description.Manufacturer
-			device.Product.ID = description.Name
 			device.Product.Name = description.Description
+			device.Product.ID = description.Name
 			device.PNPClass = description.PNPClass
 			break
 		}
