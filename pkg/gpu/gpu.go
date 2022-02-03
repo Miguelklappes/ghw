@@ -35,8 +35,8 @@ type GraphicsCard struct {
 	Description             string         `json:"description"`
 	DeviceID                string         `json:"device_id"`
 	PNPDeviceID             string         `json:"pnp_device_id"`
-	SystemCreationClassName string         `json:"system_creation_class_name"`
 	Name                    string         `json:"name"`
+	SystemCreationClassName string         `json:"system_creation_class_name"`
 	SystemName              string         `json:"system_name"`
 	VideoArchitecture       uint16         `json:"video_architecture"`
 	VideoMemoryType         uint16         `json:"video_memory_type"`
