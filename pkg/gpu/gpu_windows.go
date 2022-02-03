@@ -56,6 +56,7 @@ func (i *Info) load() error {
 	queryAddresses := []string{}
 	for _, description := range win32VideoControllerDescriptions {
 		var queryAddres = description.PNPDeviceID
+
 		queryAddresses = append(queryAddresses, "PNPDeviceID='"+queryAddres+"'")
 	}
 	whereClause := strings.Join(queryAddresses[:], " OR ")
