@@ -29,8 +29,8 @@ type GraphicsCard struct {
 	// Topology node that the graphics card is affined to. Will be nil if the
 	// architecture is not NUMA.
 	Node                    *topology.Node `json:"node,omitempty"`
-	VideoModeDescription    string         `json:"video_mode_description"`
 	Caption                 string         `json:"caption"`
+	VideoModeDescription    string         `json:"video_mode_description"`
 	CreationClassName       string         `json:"creation_class_name"`
 	Description             string         `json:"description"`
 	DeviceID                string         `json:"device_id"`
