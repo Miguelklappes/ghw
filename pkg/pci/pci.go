@@ -41,9 +41,8 @@ type Device struct {
 	ProgrammingInterface *pcidb.ProgrammingInterface `json:"programming_interface"`
 	// Topology node that the PCI device is affined to. Will be nil if the
 	// architecture is not NUMA.
-	Node     *topology.Node `json:"node,omitempty"`
-	Driver   string         `json:"driver"`
-	PNPClass string         `json:"pnp_class"`
+	Node   *topology.Node `json:"node,omitempty"`
+	Driver string         `json:"driver"`
 }
 
 type devIdent struct {
