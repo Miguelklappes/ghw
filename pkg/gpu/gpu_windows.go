@@ -81,6 +81,7 @@ func (i *Info) load() error {
 			CreationClassName:       description.CreationClassName,
 			Description:             description.Description,
 			Name:                    description.Name,
+			PNPDeviceID:             description.PNPDeviceID,
 			DeviceID:                description.DeviceID,
 			SystemCreationClassName: description.SystemCreationClassName,
 			SystemName:              description.SystemName,
