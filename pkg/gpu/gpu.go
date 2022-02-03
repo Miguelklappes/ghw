@@ -30,8 +30,8 @@ type GraphicsCard struct {
 	// architecture is not NUMA.
 	Node                    *topology.Node `json:"node,omitempty"`
 	Caption                 string         `json:"caption"`
-	VideoModeDescription    string         `json:"video_mode_description"`
 	CreationClassName       string         `json:"creation_class_name"`
+	VideoModeDescription    string         `json:"video_mode_description"`
 	Description             string         `json:"description"`
 	DeviceID                string         `json:"device_id"`
 	PNPDeviceID             string         `json:"pnp_device_id"`
